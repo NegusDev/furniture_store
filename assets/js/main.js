@@ -40,9 +40,28 @@ let swiper = new Swiper('.swiper-container', {
 	breakpoints: {
 		375:{
 			slidesPerView:2,
+		},
+		768:{
+			slidesPerView:3,
 		}
 	},
 	loop:false,
+	mousewheel:true,
+	keyboard:true
+});
+const swipe = new Swiper('.swipe', {
+	cssMode:true,
+	loop:true,	
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	breakpoints: {
+		375:{
+			slidesPerView:1,
+		}	
+	},
+	
 	mousewheel:true,
 	keyboard:true
 });

@@ -50,6 +50,7 @@ html, body {
 }
 body {
   display: flex;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   flex-direction: column;
 }
 .content {
@@ -84,11 +85,7 @@ img {
   border-bottom: darkgray;
 }
 a.navbar-brand {
-  background-image: url(../img/images.jpeg);
-  background-size: cover;
-  background-position: center;
-  width: 60px;
-  height: 30px;
+  font-weight: bolder;
   box-shadow: 0px 0px 2px #5f5f5f
               /*0px 0px 0px 5px #ecf0f3,
               8px 8px 15px #a7aaaf,
@@ -177,6 +174,77 @@ a .badge {
     top: 2rem !important;
   }
 
+  
+  .product-box {
+    position: relative;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    /* box-shadow: 0px 3px 10px  rgba(57,56,61,0.205),
+                0px -3px 12px  rgba(57,56,61,0.205); */
+  }
+  .product-box .btn-heart {
+    position: absolute;
+    right: .2em;
+    top: -.2em;
+  }
+  .product-box h6 {
+    margin-top: .445em;
+    font-size: .889rem;
+  }
+  .product-box p {
+    font-size: .778em;
+  }
+  .product-box .cart button {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .789rem !important;
+    letter-spacing: .223em;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    font-weight: bolder;
+    background: #212529 !important;
+  }
+  .price-tag {
+    font-size: 1.289rem !important;
+
+  }
+ .add-cart button {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .789rem !important;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    font-weight: bolder;
+    border-radius: 2px !important;
+    background: #212529 !important;
+  }
+  .add-cart button:hover {
+    color: #212529;
+    text-transform: uppercase;
+    font-size: .789rem !important;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    border-radius: 2px !important;
+    font-weight: bolder;
+    border: 1px solid #212529 ;
+    background: transparent !important;
+  }
+  .buy-now button {
+    color: #212529;
+    text-transform: uppercase;
+    font-size: .789rem !important;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    border-radius: 2px !important;
+    font-weight: bolder;
+    border: 1px solid #212529 ;
+    background: transparent !important;
+  }
+  .buy-now button:hover{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .789rem !important;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    font-weight: bolder;
+    border-radius: 2px !important;
+    background: #212529 !important;
+  }
+
 
 @media only screen and (max-width: 770px) {
   button.navbar-toggler {
@@ -197,6 +265,11 @@ a .badge {
     width: 100%;
     color: #000;
   }
+  p.logo {
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 2px #5f5f5f;
+    font-weight: bolder;
+  }
   .input-search,
   .btn-search {
     height: 40px;
@@ -210,6 +283,7 @@ a .badge {
   }
   .nav-icons li.nav-item a.nav-link {
     /*background: teal;*/
+    font-size: 1.3rem;
     color: #000;
     padding: 0 5px !important;
   }
@@ -268,20 +342,40 @@ a .badge {
   .swiper-button-prev{
     left: .5rem;
   }
-  .news-letter-btn {
-    margin-top: 3px;
-  }
-  .footer-img {
+
+  .product-box {
     position: relative;
-    width: 80px;
-    height: 30px;
-    margin-left: 12px;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    /* box-shadow: 0px 3px 10px  rgba(57,56,61,0.205),
+                0px -3px 12px  rgba(57,56,61,0.205); */
   }
-  .footer-img img {
+  .product-box .btn-heart {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+    right: .2em;
+    top: -.2em;
+  }
+  .product-box h6 {
+    margin-top: .445em;
+    font-size: .889rem;
+  }
+  .product-box p {
+    font-size: .778em;
+  }
+  .product-box .cart button {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .789rem !important;
+    letter-spacing: .223em;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    font-weight: bolder;
+    background: #212529 !important;
+  }
+  .colors  div{
+    width: 20px;
+    height: 20px;
+  }
+   .news-letter-btn {
+    margin-top: 3px;
   }
 
 }
