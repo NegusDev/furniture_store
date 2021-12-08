@@ -65,3 +65,20 @@ const swipe = new Swiper('.swipe', {
 	mousewheel:true,
 	keyboard:true
 });
+
+// document.getElementById('button').addEventListener('click', load);
+
+// function load() {
+// 	// CREATE XHR OBJECT
+// 	let xhr = new XMLHttpRequest();
+// 	// OPEN - type, url/file, async
+// 	xhr.open('GET', 'product.html', true);
+
+// 	xhr.onload = function () {
+// 		if (this.status == 200) {
+// 			let data = this.response;
+// 			console.log(data);
+// 		}
+// 	}
+// 	xhr.send();
+// }

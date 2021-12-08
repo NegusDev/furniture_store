@@ -306,10 +306,13 @@ a .badge {
     margin-top: 15px;
   }
   ul.nav-icons {
-    margin-left: 60px !important;
+    margin:auto !important;
   }
   .nav-icons li.nav-item {
-    padding: 0 !important;
+    /* padding: 0 !important; */
+    margin: auto;
+    padding: 0 2px;
+    border: 1px solid black !important;
   }
   .nav-icons li.nav-item a.nav-link {
     /*background: teal;*/
