@@ -1,4 +1,12 @@
 <?php
+global $View;
+global $Product;
 
 
-include('Views/Templates/home.html');
+$product  = $Product->getAllProducts();
+$page['content'] = $Product->viewProducts($product);
+
+$View->header();
+include('Views/Templates/_home.php');
+$View->footer();
+

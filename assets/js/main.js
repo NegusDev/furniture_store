@@ -66,6 +66,13 @@ const swipe = new Swiper('.swipe', {
 	keyboard:true
 });
 
+document.getElementsByClassName('add-to-fav').addEventListener('click', add);
+
+function add() {
+	console.log("clicked");
+}
+
+
 // document.getElementById('button').addEventListener('click', load);
 
 // function load() {

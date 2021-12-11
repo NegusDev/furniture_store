@@ -8,5 +8,12 @@ spl_autoload_register(function($className){
 });
 
 $Router =  new Router();
+$Db = new DbController();
+$Product = new Product();
+$Cart = new Cart();
+$Wishlist = new Wishlist();
+$Search = new Search();
 $View = new View();
 // echo $Router;
+
+$page = [];

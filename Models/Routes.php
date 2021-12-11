@@ -1,5 +1,7 @@
 <?php
+
 Router::get('/', function() {
+    
     include('./home.php');
 }); 
 

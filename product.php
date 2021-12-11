@@ -1,3 +1,8 @@
 <?php
+global $View;
+global $Product;
 
-include('Views/Templates/product.html');
+$View->header();
+include('Views/Templates/_product.php');
+$View->footer();
+

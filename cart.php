@@ -1,3 +1,7 @@
 <?php
+global $View;
+global $Product;
 
-include('Views/Templates/cart.html');
+$View->header();
+include('Views/Templates/_cart.php');
+$View->footer();
