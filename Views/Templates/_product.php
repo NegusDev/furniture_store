@@ -7,7 +7,7 @@
 <div class="swiper-pagination"></div>
 <div class="swiper-slide">
 <div class="product-img">
-<img src="assets/img/banner-1.jpg" class="img-fluid rounded-2">
+<img src="<?= $product['product_image'] ?>" class="img-fluid rounded-2">
 </div>
 </div>
 <div class="swiper-slide">
@@ -29,11 +29,11 @@
 <div class="row">
 <hr class="m-0">
 <div class="col">
-<h4 class="m-0">Asian style sofa</h4>
+<h4 class="m-0"><?= $product['product_name'] ?></h4>
 <div class="price">
-<p class="price-tag m-0 fw-bold">Shs200000</p>
+<p class="price-tag m-0 fw-bold">Shs<?= $product['product_price'] ?></p>
 </div>
-<small><strong>Categories</strong>: seats and sofas</small>
+<small><strong>Categories</strong>: <?= $product['id'] ?></small>
 <div class="d-flex  align-items-center">
 <small><strong>Colors: </strong></small>
 <div class="colors d-flex justify-content-between">
@@ -96,8 +96,7 @@ class="fas fa-plus"></i></button>
 <div class="col-12">
 <h6 class="text-center fw-bold">Description</h6>
 <hr class="m-0">
-<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto sit minima deserunt
-earum. Natus facere incidunt officia modi ratione!</p>
+<p class="text-center"><?= $product['product_description'] ?></p>
 </div>
 </div>
 </div>

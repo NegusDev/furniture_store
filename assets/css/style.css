@@ -69,7 +69,7 @@ a {
   text-decoration: none;
 }
 img {
-  width: 100%;
+  max-width: 100%;
   /* height: auto; */
 }
 
@@ -215,6 +215,15 @@ a .badge {
     border-radius: 2px !important;
     background: #212529 !important;
   }
+  input.disabled {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .789rem !important;
+    box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
+    font-weight: bolder;
+    border-radius: 2px !important;
+    background: #dc3545 !important;
+  }
   .add-cart button:hover {
     color: #212529;
     text-transform: uppercase;
@@ -273,6 +282,11 @@ a .badge {
     font-weight: bolder;
     border: 1px solid #0d6efd ;
     background: #0d6efd !important;
+  }
+
+  .subtotal h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
 
@@ -409,6 +423,48 @@ a .badge {
   }
    .news-letter-btn {
     margin-top: 3px;
+  }
+  .subtotal h5 {
+    font-size: .979rem;
+    font-weight: bold;
+  }
+  span.price-tag {
+    /* margin-top: .445rem; */
+    font-size: .900rem !important;
+  }
+  h5.product-name{
+    font-size: .979rem !important;
+    font-weight: 300;
+    margin-top: .445rem;
+  }
+  .cart-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+ .cart-img img {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+  }
+  .qty-title {
+    font-size: .899rem;
+  }
+  /* .qty-btn {
+   
+  } */
+  .qty-btn button {
+    font-size: .577rem;
+    height: auto;
+  }
+  .qty-btn input {
+    font-size: .577rem;
+  }
+  .delete-cart button {
+    font-size: .577rem !important;
+
   }
 
 }

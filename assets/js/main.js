@@ -24,6 +24,66 @@ $(document).ready(function(){
 		 dots:true,
 		 responsive:responsive
  	});
+	//  add to cart button
+	let $add_cart = $();
+
+	//  cart content
+	 let $qty_plus = $(".qty-btn .qty-plus");
+	 let $qty_minus = $(".qty-btn .qty-minus");
+	 let $sub = $("#subtotal");
+	//  console.log($sub.text());
+
+	//  up button
+	$qty_plus.click(function(e) {
+
+		let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
+		let $price = $(`.price-tag[data-id='${$(this).data("id")}']`);
+
+		// change product price using ajax call
+		$.ajax({uri:"../cart.php", type:'POST', data:{productId:$(this).data("id")}, success: function(result) {
+			let obj = JSON.parse(result);
+			let product_price = obj[0]['product_price'];
+
+			if ($input.val() >= 1 && $input.val() <=9) {
+				$input.val(function(i, oldval) {
+					return ++oldval;
+				});
+					// Increase price of the product
+			$price.text(parseInt(product_price * $input.val()).toFixed(2));
+
+			// set sub total
+			let subtotal = parseInt($sub.text()) + parseInt(product_price);
+			// console.log(total);
+			$sub.text(subtotal.toFixed(2));
+			}
+		}});
+	});
+
+	//  down button
+	$qty_minus.click(function(e) {
+		let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
+		let $price = $(`.price-tag[data-id='${$(this).data("id")}']`);
+		
+		$.ajax({uri:"../cart.php", type:'POST', data:{productId:$(this).data("id")}, success: function(result) {
+			let obj = JSON.parse(result);
+			let product_price = obj[0]['product_price'];
+
+			if ($input.val() > 1 && $input.val() <=10) {
+				$input.val(function(i, oldval) {
+					return --oldval;
+				});
+				$price.text(parseInt(product_price * $input.val()).toFixed(2));
+	
+				// set sub total
+				let subtotal = parseInt($sub.text()) - parseInt(product_price);
+				// console.log(total);
+				$sub.text(subtotal.toFixed(2));
+			}
+			
+		}});
+		
+	});
+
 });
 
 let swiper = new Swiper('.swiper-container', {
@@ -66,11 +126,11 @@ const swipe = new Swiper('.swipe', {
 	keyboard:true
 });
 
-document.getElementsByClassName('add-to-fav').addEventListener('click', add);
+// document.getElementsByClassName('add-to-fav').addEventListener('click', add);
 
-function add() {
-	console.log("clicked");
-}
+// function add() {
+// 	console.log("clicked");
+// }
 
 
 // document.getElementById('button').addEventListener('click', load);

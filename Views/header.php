@@ -29,13 +29,22 @@ FaniTure
 <li class="nav-item d-inline-block">
     <a class="nav-link" href="/wishlist">
     <i class="fas fa-heart"></i>
-    <span class="text-center badge rounded-circle bg-danger d-flex">1</span>
+    <!-- <span class="text-center badge rounded-circle bg-danger d-flex"></span> -->
     </a>
 </li>
 <li class="nav-item d-inline-block">
     <a class="nav-link " href="/cart">
     <i class="fas fa-shopping-cart"></i>
-    <span class="text-center badge rounded-circle bg-danger d-flex">1</span>
+    <?php
+        if (!empty($Cart->getCart('cart'))) {
+            echo '
+                <span class="text-center badge rounded-circle bg-danger d-flex">'.  count($Cart->getCart( 'cart')) .'</span>
+            ';
+        }
+        else {
+            echo '';
+        }
+    ?>
     </a>
 </li>
 </ul>
