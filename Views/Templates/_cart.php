@@ -1,6 +1,6 @@
-<section class="cart my-4" id="cart">
+<section class="cart my-5" id="cart">
 <div class="container">
-<h2 class="text-center">Your Shopping Cart</h2>
+<h3 class="fw-bold">Your Shopping Cart</h3>
 <div class="row">
     <div class="col-md-8">
         <?php
@@ -56,7 +56,7 @@
                     </div>
                     <form method="post" class="delete-cart">
                         <input type="hidden" value="<?= $item['product_id']  ?>" name="product_id">
-                        <button type="submit" name="delete-cart-submit" class="btn ">Remove</button>
+                        <button type="submit"  name="delete-cart-submit" data-id="<?= $item['product_id'] ?>" class="btn remove">Remove</button>
                     </form>
                 </div>
             </div>   

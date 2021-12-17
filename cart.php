@@ -1,8 +1,16 @@
 <?php
+session_start();
+if (!isset($_SESSION['id'])) {
+	header('Location: /login');
+}
 global $View;
 global $Product;
 global $Cart;
+global $Seach;
+
 include("./Controllers/Cart.php");
+include("./Controllers/Search.php");
+
 
 // AJAX CALL
 if (isset($_POST['productId'])) {
@@ -10,6 +18,7 @@ if (isset($_POST['productId'])) {
     echo json_encode($pro);
     exit;
  }
+
 
 $get_cart = $Cart->getCart('cart');
 

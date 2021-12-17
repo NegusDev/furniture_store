@@ -5,7 +5,7 @@ class Product extends DbController {
     public function getAllProducts() {
         if ($this->conn != null) {
             $sql = "SELECT product.*, category.category_name FROM product
-                    INNER JOIN category ON product.category_id = category.id";      
+                    LEFT JOIN category ON product.category_id = category.id";      
             $result = $this->conn->query($sql) or die($this->conn->error);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -28,7 +28,7 @@ class Product extends DbController {
             ';
         }else {
             foreach ($products as $product) {
-                if (!empty(in_array($product['product_id'], $Cart->getCartId($Cart->getCart('cart'))))) {
+                if (!empty(in_array($product['product_id'], $Cart->getCartId($Cart->getCart($_SESSION['id']))))) {
                     $html .= '
                     <div class="col-md-3 col-6">
                     <div class="product-box py-2 px-2 my-2 rounded-2">
@@ -76,8 +76,8 @@ class Product extends DbController {
                 </div>
                 <div class="cart mt-2">
                 <form method="post" action="" >
-                    <input type="hidden" name="cart" value="'.$product['product_id'].'">
-                    <button type="submit"  class="btn btn-light w-100">Add to cart</button>
+                    <input type="hidden" name="cart"  value="'.$product['product_id'].'">
+                    <button type="submit"  class="btn btn-light w-100 add">Add to cart</button>
                 </form>
                 </div>
                 </div>

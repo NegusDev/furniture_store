@@ -13,7 +13,12 @@ $Product = new Product();
 $Cart = new Cart();
 $Wishlist = new Wishlist();
 $Search = new Search();
+$User = new User();
 $View = new View();
 // echo $Router;
 
 $page = [];
+$page['show_menu'] = true;
+
+$search = [];
+

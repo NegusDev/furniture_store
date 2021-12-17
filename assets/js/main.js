@@ -25,7 +25,20 @@ $(document).ready(function(){
 		 responsive:responsive
  	});
 	//  add to cart button
-	let $add_cart = $();
+	// let $remove_cart = $(".remove");
+
+	// $remove_cart.click(function(){
+	// 	$.ajax({
+	// 		uri:"../cart.php",
+	// 		type:"POST",
+	// 		data: {product_id:$(this).data("id")},
+	// 		success: function(result) {
+	// 			let obj = JSON.parse(result);
+	// 			console.log(obj);
+	// 		}
+	// 	});
+
+	// });
 
 	//  cart content
 	 let $qty_plus = $(".qty-btn .qty-plus");
