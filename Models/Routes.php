@@ -5,10 +5,6 @@ Router::get('/', function() {
 }); 
 Router::post('/', function() {
   include('./home.php');
-  // echo "<pre>";
-  // var_dump($_POST);
-  // echo "</pre>";
-  // exit;
 });
 
 Router::get('/product', function() {
@@ -34,10 +30,6 @@ Router::get('/register', function() {
 });
 Router::post('/register', function() {
   include('./register.php');
-  echo "<pre>";
-  var_dump($_POST);
-  echo "</pre>";
-  exit;
 });
 
 Router::get('/login', function() {
@@ -46,6 +38,7 @@ Router::get('/login', function() {
 Router::post('/login', function() {
   include('./login.php');
 });
+
 Router::get('/logout', function() {
   include('./logout.php');
 });
@@ -54,7 +47,7 @@ Router::get('/logout', function() {
 // NOT FOUND
 Router::get(Router::uri(), function () {
   http_response_code(404);
-  include('./_404.php');
+  include('./404.php');
   
 });
 

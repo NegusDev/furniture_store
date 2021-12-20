@@ -5,7 +5,7 @@ if (isset($_POST['add_fav'])) {
     $wishlist_id = rand(time(),2000);
     $data = [
         "wishlist_id" =>hash('sha256', $wishlist_id),
-        "user_id" => $_SESSION['user_id'],
+        "user_id" => $_SESSION['id'],
         "product_id" => $_POST['add_fav']
     ];
 

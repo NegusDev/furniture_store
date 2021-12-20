@@ -96,6 +96,17 @@ $(document).ready(function(){
 		}});
 		
 	});
+	// $("#reg-form").submit(function(e) {
+	// 	let $password = $("#password");
+	// 	let $confirm = $("#confirm_password");
+	// 	let $error = $("#error");
+	// 	if ($password.val() === $confirm.val() ) {
+	// 		return true;
+	// 	}else {
+	// 		$error.text("Password not Match");
+	// 		e.preventDefault();
+	// 	}
+	// });
 
 });
 

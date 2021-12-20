@@ -20,7 +20,7 @@ if (isset($_POST['productId'])) {
  }
 
 
-$get_cart = $Cart->getCart('cart');
+$get_cart = $Cart->getCart($_SESSION['id']);
 
 
 

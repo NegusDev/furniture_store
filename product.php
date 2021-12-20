@@ -5,7 +5,7 @@ if (!isset($_SESSION['id'])) {
 }
 global $View;
 global $Product;
-global $Seach;
+global $Search;
 include("./Controllers/Search.php");
 
 

@@ -73,23 +73,24 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mx-auto mb-2 mb-md-0">
             <li class="nav-item  me-1">
-                <a class="nav-link " aria-current="page" href="/">Home</a>
+                <a class="nav-link nav_link " aria-current="page" href="/">Home</a>
             </li>
-            <li class="nav-item  dropdown me-1">
-                <a class="nav-link  dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" id="drop" href="#" aria-expanded="false">Categories</a>
-                <ul class="dropdown-menu" aria-labelledby="drop">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            <li class="nav-item  dropdown ">
+                <a class="nav-link nav_link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" id="drop" href="#" aria-expanded="false">Categories</a>
+                <ul class="dropdown-menu " aria-labelledby="drop">
+                <li><hr  class="m-0"><li>
+                <li><a class="dropdown-item fw-bold" href="#">Tables</a></li>
+                <li><a class="dropdown-item fw-bold" href="#">Sofas</a></li>
+                <li><a class="dropdown-item fw-bold" href="#">Wardrobes</a></li>
+                <li><a class="dropdown-item fw-bold" href="#">Bed</a></li>
+                <li><hr class="m-0"><li>
                 </ul>
             </li>
             <li class="nav-item me-1 ">
-                <a class="nav-link " href="/more">Who we are</a>
+                <a class="nav-link nav_link" href="/more">Who we are</a>
             </li>
             <li class="nav-item me-1 ">
-                <a class="nav-link " href="/logout">logout</a>
+                <a class="nav-link nav_link" href="/logout">logout</a>
             </li>
             </ul>
             
@@ -108,24 +109,17 @@
             ';
         }else {
             echo '
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <header class="loggedout">
+                <nav class="navbar navbar-expand-xs navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand py-2 px-1" href="#">
                     FaniTure
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item border me-3">
+                                        
+                    <div class="d-flex tags">
                         <a class="nav-link" href="/register">Signup</a>
-                        </li>
-                        <li class="nav-item  border me-2">
                         <a class="nav-link" href="/login">Login</a>
-                        </li>
-                    </ul>
+                    </div>
                     </div>
                 </div>
                 </nav>
@@ -133,3 +127,5 @@
             ';
         }
     ?>
+
+    <main class="content">

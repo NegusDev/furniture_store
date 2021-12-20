@@ -31,21 +31,25 @@ if (isset($_POST['signup'])) {
         $error['user_email'] = "Email is required";
     }
     if (empty($data['user_password'])) {
-        $error['password'] = "password is required and must have more than 8 characters ";
+        $error['password'] = "password is required";
     }
-    if (empty($confirm_pass)) {
+    if (empty($confirm_pass) || $confirm_pass !== $data['user_password']) {
         $error['confirm_password'] = "Password doesn't match";
     }
     // var_dump($_POST);
     // exit;
 
-    $result = $User->createUser($data);
-    if ($result) {
-        header("location:/login");
+    if ($error == ["user_name" => "","user_email" => "","password" => "","confirm_password" => ""]) {
+        $result = $User->createUser($data);
+        if ($result) {
+            header("location:/login");
+        }
+        else{
+            die("failed");
+            header("location".$_SERVER['PHP_SELF']);
+        }
     }
-    else{
-        die("failed");
-    }
+    
 
 }
 

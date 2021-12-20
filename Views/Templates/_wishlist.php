@@ -8,7 +8,7 @@
             <div class="col-12 text-center my-5 alert alert-danger">
                 <h1 class="heading-1 text-center">
                     Oops Your wishlist is empty!
-                </h1>
+                </h1> 
             </div>
             ';
         }
@@ -19,7 +19,7 @@
         ?>
             <div class="col-md-4 col">
                 <div class="product-box py-2 px-2 my-2 rounded-2">
-                    <form method="post" class="pb-2" >
+                    <form method="post" class="pb-2  form-fav" >
                         <input type="hidden" name="delete_fav" value="<?= $wishlist['product_id'] ?>">
                         <button type="submit" name="remove_submit" class="btn btn-heart fas fa-times"></button>
                     </form>
@@ -37,7 +37,7 @@
                             <input type="hidden" name="cart"   value="<?= $wishlist['product_id'] ?>">
                             <?php 
                             global $Cart;
-                                if (!empty(in_array($wishlist['product_id'], $Cart->getCartId($Cart->getCart('cart'))))) {
+                                if (!empty(in_array($wishlist['product_id'], $Cart->getCartId($Cart->getCart($_SESSION['id']))))) {
                                    echo '
                                    <input type="submit"  disabled class="btn btn-danger w-100 disabled" value="In the Cart">
                                    ';

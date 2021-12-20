@@ -32,9 +32,9 @@ class Product extends DbController {
                     $html .= '
                     <div class="col-md-3 col-6">
                     <div class="product-box py-2 px-2 my-2 rounded-2">
-                    <form method="post" >
+                    <form method="post" class="form-fav">
                         <input type="hidden" name="add_fav" value="'.$product['product_id'].'">
-                        <button type="submit"  class="btn btn-heart fas fa-heart"></button>
+                        <button type="submit" class="btn btn-heart fas fa-heart"></button>
                     </form>
                     <div class="product-img mt-3">
                     <a href="/product?product_id='.$product['product_id'].'">
@@ -60,7 +60,7 @@ class Product extends DbController {
                 $html .= '
                 <div class="col-md-3 col-6">
                 <div class="product-box py-2 px-2 my-2 rounded-2">
-                <form method="post" >
+                <form method="post" class="form-fav">
                     <input type="hidden" name="add_fav" value="'.$product['product_id'].'">
                     <button type="submit" class="btn btn-heart fas fa-heart"></button>
                 </form>
@@ -92,7 +92,7 @@ class Product extends DbController {
     }
 
     public function getProductById($product_id){
-        $sql = "SELECT*FROM `product` WHERE `product_id` = '$product_id' ";
+        $sql = "SELECT * FROM `product` WHERE `product_id` = '$product_id' ";
         $result = $this->conn->query($sql) or die($this->conn->error);
         // var_dump($result);
         if ($result->num_rows > 0) {

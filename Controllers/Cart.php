@@ -5,7 +5,7 @@ if (isset($_POST['cart'])) {
     $cart_id = rand(time(),2000);
     $data = [
         "cart_id" => $cart_id,
-        "user_id" => $_SESSION['user_id'],
+        "user_id" => $_SESSION['id'],
         "product_id" => $_POST['cart']
     ];
     $result = $Cart->inserIntoCart('cart', $data);

@@ -15,7 +15,7 @@ include("./Controllers/Wishlist.php");
 
 
 
-$get_wishlist = $Cart->getCart('wishlist');
+$get_wishlist = $Wishlist->getWishlist($_SESSION['id']);
 
 $View->header();
 include('Views/Templates/_wishlist.php');
