@@ -11,6 +11,7 @@ Router::get('/product', function() {
     include('./product.php');
 });
 
+
 Router::get('/cart', function() {
    include('./cart.php');
 });
@@ -51,11 +52,3 @@ Router::get(Router::uri(), function () {
   
 });
 
-// '
-// CM73024100HAUD
-// KIMERA ZAKI MUSA
-// 5/08/2002
-// 19Yrs
-// ';
-
-// '0700968238 specioza';
