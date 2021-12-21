@@ -10,7 +10,6 @@ class Router {
 
 	public static function get($url, $content) {
 		$request_uri = self::uri();
-
 		if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 			if ($request_uri == $url) {
 				if (is_callable($content)) {
