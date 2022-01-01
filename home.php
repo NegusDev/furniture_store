@@ -5,6 +5,7 @@ global $Product;
 global $Cart;
 global $Wishlist;
 global $Search;
+global $Category;
 
 include("./Controllers/Cart.php");
 include("./Controllers/Wishlist.php");
@@ -15,6 +16,10 @@ if (!isset($_SESSION['id'])) {
 }
 
 // include("./Controllers/Wishlist.php");
+// echo "<pre>";
+// print_r($Category->getCategories('category'));
+// echo "</pre>";
+// exit;
 
 
 $product  = $Product->getAllProducts();
@@ -25,8 +30,8 @@ global $total_cart;
 
 // var_dump($total_cart);
 // exit;
-
 $View->header();
+
 include('Views/Templates/_home.php');
 $View->footer();
 

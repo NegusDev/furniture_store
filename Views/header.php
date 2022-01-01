@@ -16,6 +16,8 @@
     <?php  
         if (isset($_SESSION['id'])) {
             $session = $_SESSION['id'];
+            $cat = $Category->getCategories('category');
+            $category['content'] = $Category->viewCategories($cat);
             echo '
             <header id="header" class="shadow">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
@@ -77,14 +79,7 @@
             </li>
             <li class="nav-item  dropdown ">
                 <a class="nav-link nav_link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" id="drop" href="#" aria-expanded="false">Categories</a>
-                <ul class="dropdown-menu " aria-labelledby="drop">
-                <li><hr  class="m-0"><li>
-                <li><a class="dropdown-item fw-bold" href="#">Tables</a></li>
-                <li><a class="dropdown-item fw-bold" href="#">Sofas</a></li>
-                <li><a class="dropdown-item fw-bold" href="#">Wardrobes</a></li>
-                <li><a class="dropdown-item fw-bold" href="#">Bed</a></li>
-                <li><hr class="m-0"><li>
-                </ul>
+               '. $category["content"].'
             </li>
             <li class="nav-item me-1 ">
                 <a class="nav-link nav_link" href="/more">Who we are</a>

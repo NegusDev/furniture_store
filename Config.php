@@ -15,10 +15,11 @@ $Wishlist = new Wishlist();
 $Search = new Search();
 $User = new User();
 $View = new View();
+$Category = new Category();
 // echo $Router;
 
 $page = [];
-$page['show_menu'] = true;
 
 $search = [];
+$category = [];
 

@@ -29,7 +29,7 @@ class Product extends DbController {
         }else {
             foreach ($products as $product) {
                 if (!empty(in_array($product['product_id'], $Cart->getCartId($Cart->getCart($_SESSION['id']))))) {
-                    $html .= '
+                    $html .= ' 
                     <div class="col-md-3 col-6">
                     <div class="product-box py-2 px-2 my-2 rounded-2">
                     <form method="post" class="form-fav">
