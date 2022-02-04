@@ -111,8 +111,7 @@ $(document).ready(function(){
 });
 
 let swiper = new Swiper('.swiper-container', {
-	cssMode:true,
-	spaceBetween:30,
+	spaceBetween:20,
 	// navigation: {
 	// 	nextEl:'.swiper-button-next',
 	// 	prevEl:'.swiper-button-prev',
@@ -129,7 +128,7 @@ let swiper = new Swiper('.swiper-container', {
 			slidesPerView:3,
 		}
 	},
-	loop:false,
+	// loop:true,
 	mousewheel:true,
 	keyboard:true
 });

@@ -92,7 +92,7 @@ a.navbar-brand {
               -8px -8px 15px whitesmoke*/;
 }
 .navbar-nav .nav-item {
-  border-bottom: 2px solid darkgray;
+  /* border-bottom: 2px solid darkgray; */
 }
 .navbar-nav .nav-item a.nav-link{
   color: #000;
@@ -174,7 +174,23 @@ a .badge {
     top: 2rem !important;
   }
 
-  
+  .item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .item img {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    opacity: 1;
+  }
+  .product-img  a img{
+    width: 100%;
+    height: 200px;
+  }
+ 
   .product-box {
     position: relative;
     box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
@@ -368,7 +384,7 @@ header.loggedout .nav-link {
     background: transparent !important;
   }
  
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 768px) {
   button.navbar-toggler {
     outline: none !important;
     border:none !important;
@@ -444,6 +460,14 @@ header.loggedout .nav-link {
   .swiper-button-prev::after {
     content: '';
   }
+  .item {
+    /* max-height:50% !important; */
+  }
+  .item img {
+    position: absolute;
+    bottom:unset !important;
+    width: 100%;
+  }
   .swiper-icon {
     font-size: 20px;
     color: black;
@@ -454,7 +478,10 @@ header.loggedout .nav-link {
   .swiper-button-prev{
     left: .5rem;
   }
-
+  .product-img  a img{
+    width: 100%;
+    height: 100px;
+  }
   .product-box {
     position: relative;
     box-shadow: 0px 1px 14px rgba(57,56,61,0.205);
